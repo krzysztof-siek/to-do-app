@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/to-do-app/./static/css/main.c9bbdd32.chunk.css",
+    "main.js": "/to-do-app/./static/js/main.b108ade4.chunk.js",
+    "main.js.map": "/to-do-app/./static/js/main.b108ade4.chunk.js.map",
+    "runtime~main.js": "/to-do-app/./static/js/runtime~main.1a75560d.js",
+    "runtime~main.js.map": "/to-do-app/./static/js/runtime~main.1a75560d.js.map",
+    "static/js/2.4c76d912.chunk.js": "/to-do-app/./static/js/2.4c76d912.chunk.js",
+    "static/js/2.4c76d912.chunk.js.map": "/to-do-app/./static/js/2.4c76d912.chunk.js.map",
+    "index.html": "/to-do-app/./index.html",
+    "precache-manifest.a5f344d45b3347e18898b11556ebf0df.js": "/to-do-app/./precache-manifest.a5f344d45b3347e18898b11556ebf0df.js",
+    "service-worker.js": "/to-do-app/./service-worker.js",
+    "static/css/main.c9bbdd32.chunk.css.map": "/to-do-app/./static/css/main.c9bbdd32.chunk.css.map",
+    "static/media/App.css": "/to-do-app/./static/media/cloud-formation-clouds-cloudy-247478.70ccb8d0.jpg"
+  }
+}
