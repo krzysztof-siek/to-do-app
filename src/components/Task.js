@@ -9,6 +9,7 @@ const Task = props => {
     return (
       <div
         class="Task"
+        id={uid}
         style={
           prio
             ? {
@@ -38,7 +39,7 @@ const Task = props => {
     );
   } else {
     return (
-      <div class="Task">
+      <div class="Task" id={uid}>
         <h1>{name}</h1>
 
         <span className="icon-close" onClick={() => props.removeData(task)}>

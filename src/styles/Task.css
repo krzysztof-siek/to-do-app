@@ -20,6 +20,7 @@
   min-height: 20vh;
   max-height: 60vh;
   overflow: auto;
+  overflow-x: hidden;
   border-bottom: 2px solid white;
 }
 

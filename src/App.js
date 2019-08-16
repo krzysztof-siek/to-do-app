@@ -36,11 +36,11 @@ class App extends React.Component {
     this.getUserData();
     const bgc = new TimelineLite();
     bgc
-      .fromTo(".App", 1, {width: 10}, {width: "100vw"})
+      .fromTo(".App", 0.8, {width: 10}, {width: "100vw"})
       .fromTo(
         ".App",
-        1,
-        {height: 1},
+        0.8,
+        {height: 5},
         {height: "100vh", ease: Power2.easeInOut}
       );
     const headerTxt = new TimelineLite();
@@ -54,11 +54,17 @@ class App extends React.Component {
   }
 
   removeData = task => {
+    const close = new TimelineLite();
+    const selectedTask = document.getElementById(task.uid);
+    close.fromTo(selectedTask, 1, {x: 0}, {x: "1000vw"});
+
     const taskList = [...this.state.taskList];
-    const newState = taskList.filter(data => {
-      return data.uid !== task.uid;
-    });
-    this.setState({taskList: newState});
+    setTimeout(() => {
+      const newState = taskList.filter(data => {
+        return data.uid !== task.uid;
+      });
+      this.setState({taskList: newState});
+    }, 500);
   };
 
   updateData = task => {
@@ -100,10 +106,12 @@ class App extends React.Component {
       console.log("poszło");
     }
     this.setState({prio: false});
-
     this.refs.name.value = "";
-
     this.refs.uid.value = "";
+    // chciałem zrobić animację dodanego taska
+    // const close = new TimelineLite();
+    // const selectedTask = document.querySelector(".Task");
+    // close.fromTo(selectedTask, 1, {x: "-100vw"}, {x: 0});
   };
 
   doneHandler = id => {
