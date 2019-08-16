@@ -1,0 +1,125 @@
+.TaskList {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.Task {
+  background-color: rgba(255, 251, 255, 0.3);
+  color: black;
+  margin: 1rem auto;
+  width: 80%;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  /* animation: taskMoveOn;
+  animation-timing-function: linear;
+  animation-duration: 0.5s; */
+  padding: 1rem;
+}
+
+.toDoTasks {
+  min-height: 20vh;
+  max-height: 60vh;
+  overflow: auto;
+  border-bottom: 2px solid white;
+}
+
+.fas {
+  font-size: 2rem;
+}
+
+.icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: red;
+  transition: 0.5s;
+}
+
+.icon-close:hover {
+  transform: rotate(360deg);
+}
+
+.icon-done {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: green;
+  transition: 0.3s;
+}
+
+.icon-done:hover {
+  transform: scale(1.2);
+}
+
+.icon-edit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+}
+
+.icon-edit:hover {
+  color: cornflowerblue;
+}
+
+.fa-exclamation {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+
+  font-size: 2.5rem;
+  color: red;
+  /* animation: Animation infinite both;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  transform-origin: 50% 100%; */
+}
+
+/* @keyframes taskMoveOn {
+  0% {
+    position: absolute; */
+/* left: -500px;
+  }
+  50% {
+    left: -200px;
+  }
+  100% {
+    left: 0px;
+  }
+} */
+
+/* @keyframes Animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+} */
+
+/* @keyframes taskMoveOff {
+  0% {
+    left: 300px;
+  }
+  25% {
+    left: 700px;
+  }
+  50% {
+    left: 1000px;
+  }
+  75% {
+    left: 1400px;
+  }
+  100% {
+    left: 2000px;
+  }
+} */

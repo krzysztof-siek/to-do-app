@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  /* opacity: 0.5; */
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../img/cloud-formation-clouds-cloudy-247478.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 60vw;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.addTask {
+  padding: 1rem;
+  border-bottom: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  padding: 1rem;
+  font-size: 2rem;
+  font-family: "Shadows Into Light", cursive;
+  letter-spacing: 1rem;
+  font-weight: bold;
+}
+
+.form {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.4rem;
+}
+
+.form label {
+  font-family: "Shadows Into Light", cursive;
+  letter-spacing: 1rem;
+  color: red;
+  text-decoration-line: underline;
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: bold;
+  position: relative;
+  letter-spacing: 0.4rem;
+  text-shadow: 2px;
+}
+
+.form input {
+  margin: 0.4rem auto;
+  font-size: 1.4rem;
+  text-align: center;
+  border-radius: 10px;
+  border: 3px solid black;
+  background-color: transparent;
+  color: black;
+}
+
+.addTaskButton {
+  margin: 0.4rem auto;
+  padding: 0.5rem 2rem;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 576px) {
+  .form input {
+    padding: 1rem 2rem;
+  }
+  .logo {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .form input {
+    padding: 1rem 5rem;
+    margin-right: 0.6rem;
+  }
+  .addTask {
+    flex-direction: row;
+  }
+  .form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .form label {
+    padding: 0.5rem;
+  }
+}
