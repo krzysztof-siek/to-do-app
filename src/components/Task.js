@@ -8,7 +8,7 @@ const Task = props => {
   if (!done) {
     return (
       <div
-        class="Task"
+        className="Task"
         id={uid}
         style={
           prio
@@ -22,28 +22,28 @@ const Task = props => {
 
         {prio ? (
           <span className="icon-important">
-            <i class="fas fa-exclamation" />
+            <i className="fas fa-exclamation" />
           </span>
         ) : null}
 
         <span className="icon-close" onClick={() => props.removeData(task)}>
-          <i class="fas fa-times-circle" />
+          <i className="fas fa-times-circle" />
         </span>
         <span className="icon-edit" onClick={() => props.updateData(task)}>
-          <i class="fas fa-edit" />
+          <i className="fas fa-edit" />
         </span>
         <span className="icon-done" onClick={() => props.doneHandler(uid)}>
-          <i class="fas fa-check-circle" />
+          <i className="fas fa-check-circle" />
         </span>
       </div>
     );
   } else {
     return (
-      <div class="Task" id={uid}>
+      <div className="Task" id={uid}>
         <h1>{name}</h1>
 
         <span className="icon-close" onClick={() => props.removeData(task)}>
-          <i class="fas fa-times-circle" />
+          <i className="fas fa-times-circle" />
         </span>
       </div>
     );

@@ -5,6 +5,7 @@ import config from "./config";
 import TaskList from "./components/TaskList";
 import {TimelineLite, Power2} from "gsap/all";
 
+let arrayUid = [];
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -20,7 +21,6 @@ class App extends React.Component {
     Firebase.database()
       .ref("/")
       .set(this.state);
-    console.log("DATA SAVED");
   };
 
   getUserData = () => {
@@ -29,7 +29,6 @@ class App extends React.Component {
       const state = snapshot.val();
       this.setState(state);
     });
-    console.log("DATA RETRIEVED");
   };
 
   componentDidMount() {
@@ -50,6 +49,14 @@ class App extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     if (prevState !== this.state) {
       this.writeUserData();
+      if (arrayUid.length > 0) {
+        const close = new TimelineLite();
+        const selectedTask = document.getElementById(arrayUid.toString());
+
+        close.fromTo(selectedTask, 1, {x: "-100vw"}, {x: 0});
+        arrayUid = [];
+      } else {
+      }
     }
   }
 
@@ -102,16 +109,14 @@ class App extends React.Component {
       const done = false;
       const {taskList} = this.state;
       taskList.unshift({uid, name, prio, done});
+      arrayUid = [];
+      arrayUid.unshift(uid);
       this.setState({taskList});
-      console.log("poszło");
     }
     this.setState({prio: false});
+
     this.refs.name.value = "";
     this.refs.uid.value = "";
-    // chciałem zrobić animację dodanego taska
-    // const close = new TimelineLite();
-    // const selectedTask = document.querySelector(".Task");
-    // close.fromTo(selectedTask, 1, {x: "-100vw"}, {x: 0});
   };
 
   doneHandler = id => {
@@ -122,14 +127,16 @@ class App extends React.Component {
       }
       this.setState({taskList});
     });
+    arrayUid = [];
+    arrayUid.unshift(id);
   };
 
   render() {
     return (
-      <div class="wrapper">
+      <div className="wrapper">
         <div className="App">
-          <div class="addTask">
-            <div class="logo">
+          <div className="addTask">
+            <div className="logo">
               <h3>Aplikacja To Do</h3>
             </div>
             <form onSubmit={this.handleSubmit} className="form">
