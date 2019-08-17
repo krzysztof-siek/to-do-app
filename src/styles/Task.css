@@ -1,6 +1,6 @@
 .TaskList {
   min-height: 100vh;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .Task {
@@ -10,9 +10,7 @@
   width: 80%;
   font-family: "Montserrat", sans-serif;
   position: relative;
-  /* animation: taskMoveOn;
-  animation-timing-function: linear;
-  animation-duration: 0.5s; */
+
   padding: 1rem;
 }
 
@@ -70,26 +68,13 @@
 
   font-size: 2.5rem;
   color: red;
-  /* animation: Animation infinite both;
+  animation: Animation infinite both;
   animation-duration: 1s;
   animation-timing-function: linear;
-  transform-origin: 50% 100%; */
+  transform-origin: 50% 100%;
 }
 
-/* @keyframes taskMoveOn {
-  0% {
-    position: absolute; */
-/* left: -500px;
-  }
-  50% {
-    left: -200px;
-  }
-  100% {
-    left: 0px;
-  }
-} */
-
-/* @keyframes Animation {
+@keyframes Animation {
   0% {
     transform: rotate(0deg);
   }
@@ -105,22 +90,4 @@
   100% {
     transform: rotate(0deg);
   }
-} */
-
-/* @keyframes taskMoveOff {
-  0% {
-    left: 300px;
-  }
-  25% {
-    left: 700px;
-  }
-  50% {
-    left: 1000px;
-  }
-  75% {
-    left: 1400px;
-  }
-  100% {
-    left: 2000px;
-  }
-} */
+}

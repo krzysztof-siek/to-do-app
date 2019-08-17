@@ -6,8 +6,8 @@
 
 .wrapper {
   display: flex;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
   justify-content: center;
   align-items: center;
   background-color: black;
@@ -23,7 +23,7 @@
   background-position: center;
   width: 60vw;
   height: 60vh;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .addTask {
