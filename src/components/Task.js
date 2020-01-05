@@ -18,7 +18,8 @@ const Task = props => {
               }
             : null
         }>
-        <h1>{name}</h1>
+        <h2 className='taskText'>{name}</h2>
+       
 
         {prio ? (
           <span className="icon-important">
@@ -40,7 +41,7 @@ const Task = props => {
   } else {
     return (
       <div className="Task" id={uid}>
-        <h1>{name}</h1>
+        <h2 className='taskText'>{name}</h2>
 
         <span className="icon-close" onClick={() => props.removeData(task)}>
           <i className="fas fa-times-circle" />

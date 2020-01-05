@@ -141,15 +141,16 @@ class App extends React.Component {
             </div>
             <form onSubmit={this.handleSubmit} className="form">
               <input type="hidden" ref="index" />
-              <input type="text" ref="name" placeholder="Dodaj zadanie" />
-
-              <label> Priorytet </label>
-
+              <input type="text" ref="name" placeholder="Dodaj zadanie">
+              </input>
+              <div className="form-group">
+              <label> Priorytet ?</label>
               <input
                 type="checkbox"
                 onChange={this.prioHandler}
                 checked={this.state.prio}
-              />
+                />
+                </div>
               <button type="submit" className="addTaskButton">
                 Dodaj
               </button>

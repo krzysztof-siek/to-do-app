@@ -31,7 +31,7 @@ const TaskList = props => {
     <div className="TaskList">
       <div className="toDoTasks">
         {toDoTask.length > 0 ? (
-          <h2>Do zrobiena:{toDoTask.length}</h2>
+          <h2 className="section">Do zrobiena:{toDoTask.length}</h2>
         ) : (
           <h2>Brak zadań do zrobinia.</h2>
         )}
@@ -39,7 +39,7 @@ const TaskList = props => {
       </div>
       <div className="doneTasks">
         {doneTask.length > 0 ? (
-          <h2>Zrobione: {doneTask.length}</h2>
+          <h2 className="section">Zrobione: {doneTask.length}</h2>
         ) : (
           <h2>Brak zadań zrobionych</h2>
         )}

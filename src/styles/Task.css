@@ -10,6 +10,10 @@
   width: 80%;
   font-family: "Montserrat", sans-serif;
   position: relative;
+  display: flex;
+  justify-content: center;
+  
+ 
 
   padding: 1rem;
 }
@@ -72,6 +76,12 @@
   animation-duration: 1s;
   animation-timing-function: linear;
   transform-origin: 50% 100%;
+}
+.taskText {
+  margin: 10px 20px;
+}
+.section {
+  font-size: 32px;
 }
 
 @keyframes Animation {
